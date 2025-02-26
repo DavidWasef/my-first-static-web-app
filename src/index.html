@@ -1,17 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsere Firmenhistorie</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
-</body>
+    <nav>
+        <a href="microsite.html"><div class="logo">📚 Mayer & Söhne 📚</div></a>
+        <ul class="nav-links">
+            <li><a href="#history">Gründungsgeschichte</a></li>
+            <li><a href="#products">Produkte</a></li>
+            <li><a href="#milestones">Meilensteine</a></li>
+            <li><a href="#interview">Interview</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
 
+    <header>
+        <h1>Die Geschichte unseres Buchladens</h1>
+        <p>Seit über 100 Jahren ein Ort für Bücherliebhaber.</p>
+    </header>
+
+    <section id="history">
+        <h2>Unsere Wurzeln</h2>
+        <img src="Bilder/Hero.jpg" alt="Bücher-Shop">
+        <div class="text">
+            <p>Im Jahr 1925, in einer kleinen Gasse einer historischen Altstadt, eröffnete David Mayer Senior die Buchhandlung Mayer & Söhne. Schon als Kind begeisterte er sich für Literatur und träumte davon, einen Ort zu schaffen, an dem Wissen und Geschichten für alle zugänglich sind. 
+                Mit einem bescheidenen Sortiment klassischer Werke, lokal gedruckter Zeitungen und seltener Fachbücher legte er den Grundstein für ein Unternehmen, das Generationen überdauern sollte.
+                Bereits in den 1950er Jahren wuchs das Geschäft erheblich. Johanns Sohn Friedrich Meier trat in das Familienunternehmen ein und erweiterte das Sortiment um moderne Romane und internationale Literatur.
+                Mit der steigenden Nachfrage entschied sich die Familie, eine zweite Filiale in einer nahegelegenen Stadt zu eröffnen.            
+                Die 1990er Jahre brachten große Veränderungen. Während große Buchhandelsketten und das aufkommende Internet die Branche herausforderten, setzte die Buchhandlung auf persönliche Beratung und kulturelle Veranstaltungen wie Lesungen und Buchclubs.
+                Die dritte Generation, vertreten durch Michaela Mayer, wagte den Schritt in den Online-Buchhandel, um das Unternehmen zukunftsfähig zu machen.            
+                Heute, nach genau 100 Jahren, ist Mayer & Söhne mehr als nur eine Buchhandlung – sie ist ein Treffpunkt für Leseratten, Autoren und Kulturliebhaber. 
+                Mit einem erfolgreichen Online-Shop, einem gemütlichen Lesecafé und regelmäßigen Events verbindet das Unternehmen Tradition mit Moderne und beweist, dass gedruckte Bücher auch in der digitalen Welt einen festen Platz haben.
+                <br><br>
+                📚 "Geschichten bewahren, Kultur erleben – seit 1925.".
+            </p>
+        </div>
+    </section>
+
+    <section id="products">
+        <h2>Produkte</h2>
+        <div class="slider-container">
+            <button id="prev">&lt</button>
+            <div class="slider">
+                <img src="Bilder/Produkte/amisha-deotale-7gV36AfCLEM-unsplash.jpg" alt="Bild 1">
+                <img src="Bilder/Produkte/andrey-matveev-xtdJXcL77V0-unsplash.jpg" alt="Bild 2">
+                <img src="Bilder/Produkte/florian-klauer-mk7D-4UCfmg-unsplash.jpg" alt="Bild 3">
+                <img src="Bilder/Produkte/pauline-loroy-31bajeBvQFk-unsplash.jpg" alt="Bild 4">
+                <img src="Bilder/Produkte/pipcke-5HrruPyXJtU-unsplash.jpg" alt="Bild 5">
+            </div>
+            <button id="next">&gt</button>
+        </div>
+    </section>
+
+    <section id="milestones">
+        <h2>Meilensteine</h2>
+        <button class="oneline" onclick="changeText('button1')"><strong>1925</strong></button>
+        <button onclick="changeText('button2')"><strong>1950</strong></button>
+        <div id="text-box"></div>
+        <button onclick="changeText('button3')"><strong>1990</strong></button>
+        <button class="oneline" onclick="changeText('button4')"><strong>2020</strong></button>
+
+
+    </section>
+
+    <section id="interview">
+        <h2>Interview mit dem Geschäftsführer</h2>
+        <video src="Medien/Interview CEO.mp4" type="video/mp4" controls width="600"></video>
+        <audio src="Medien/Interview CEO.mp3" controls></audio>
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Besuchen Sie uns oder kontaktieren Sie uns für weitere Informationen.</p>
+        <form action="mailto:davidwasef@gmail.com" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Senden</button>
+    </section>
+
+    <section id="spiel">
+        <h2>Memory</h2>
+        <div class="game-container">
+            <div id="memory-game"></div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 Buchladen Historie. Alle Rechte vorbehalten.</p>
+    </footer>
+    <script src="content.js"></script>
+</body>
 </html>
