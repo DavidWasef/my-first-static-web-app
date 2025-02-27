@@ -177,7 +177,7 @@ section {
 
 #interview .video {
   display: flex;
-  height: 10vh;
+  height: 25vh;
   justify-content: center; 
   align-items: center;
   width: 80%;
